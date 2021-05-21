@@ -1,53 +1,53 @@
 from tkinter import *
 from tkinter import messagebox
 
-window = Tk()
-window.geometry("700x500")
-window.title("Sick Class")
-frame = Frame(window)
+root = Tk()
+root.geometry("700x500")
+root.title("Sick Class")
+frame = Frame(root)
 
 
 
 # Listing all code used for the programme
 
-MSickID = Label(window, text = "SicknessCode")
+MSickID = Label(root, text ="SicknessCode")
 MSickID.pack(side = LEFT)
 MSickID.place(x = 20, y = 20)
 
-sick_entry = Entry(window, bd =1)
+sick_entry = Entry(root, bd =1)
 sick_entry.pack(side = RIGHT)
 sick_entry.place(x = 300, y = 20)
 
-MDurationOfTreatment = Label(window, text = "DurationOfTreatment")
+MDurationOfTreatment = Label(root, text ="DurationOfTreatment")
 MDurationOfTreatment.pack(side =LEFT )
 MDurationOfTreatment.place(x = 20, y= 80)
 
-weeks_monthly = Label(window, text = "Weekly/Months")
+weeks_monthly = Label(root, text ="Weekly/Months")
 weeks_monthly.pack(side = RIGHT)
 weeks_monthly.place(x = 380, y = 80)
 
-due_entry = Entry(window, bd =1, width = 8)
+due_entry = Entry(root, bd =1, width = 8)
 due_entry.pack(side =RIGHT)
 due_entry.place(x = 300, y = 80)
 
-MDoctorsID = Label(window, text="DoctorsPracticeNumber")
+MDoctorsID = Label(root, text="DoctorsPracticeNumber")
 MDoctorsID.pack(side = LEFT)
 MDoctorsID.place(x = 20, y = 150)
 
-doc_entry = Entry(window, bd =1)
+doc_entry = Entry(root, bd =1)
 doc_entry.pack(side = RIGHT)
 doc_entry.place(x = 300, y =150)
 
-scan_fee = Label(window, text = "Scan/Consultation Fee")
+scan_fee = Label(root, text ="Scan/Consultation Fee")
 scan_fee.pack(side = LEFT)
 scan_fee.place(x = 20, y = 190)
 
-scan_entry = Entry(window, bd =1)
+scan_entry = Entry(root, bd =1)
 scan_entry.pack(side = RIGHT)
 scan_entry.place(x = 301, y = 190)
 
 
-amount_paid = Label(window)
+amount_paid = Label(root)
 amount_paid.pack(side = LEFT)
 amount_paid.place(x = 20, y = 260)
 
@@ -86,15 +86,15 @@ def sickness():
 
 
 
-radbtn1 = Radiobutton(window, text = "Cancer" , variable = var, value ="Cancer") # Radiobutton for Cancer
+radbtn1 = Radiobutton(root, text ="Cancer", variable = var, value ="Cancer") # Radiobutton for Cancer
 radbtn1.pack(side = LEFT)
 radbtn1.place(x = 20, y= 220)
 
-radbtn2 = Radiobutton(window, text = "Influenza", variable = var, value = "Influenza")# Radiobutton for Influenza
+radbtn2 = Radiobutton(root, text ="Influenza", variable = var, value ="Influenza")# Radiobutton for Influenza
 radbtn2.pack(side = LEFT)
 radbtn2.place(x = 20, y= 240)
 
-cal_btn = Button(window, text = "Calculate", command = sickness) # Calculates the amount paid for treatment once pushed
+cal_btn = Button(root, text ="Calculate", command = sickness) # Calculates the amount paid for treatment once pushed
 cal_btn.pack(side = LEFT)
 cal_btn.place(x = 20, y = 300)
 
@@ -105,10 +105,10 @@ def clear_all():
     doc_entry.delete(0,END)
     scan_entry.delete(0,END)
 
-clear_btn = Button(window, text = "Clear", command = clear_all) #Clears infomation entered
+clear_btn = Button(root, text ="Clear", command = clear_all) #Clears infomation entered
 clear_btn.pack(side = RIGHT)
 clear_btn.place(x = 300, y = 300)
 
 
 
-window.mainloop()
+root.mainloop()
